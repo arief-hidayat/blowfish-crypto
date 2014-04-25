@@ -62,7 +62,7 @@ public class Blowfish {
      */
     public static String encryptBase64(byte[] data, String password) throws InvalidCipherTextException {
         byte[] result = encrypt(data, password);
-        return Base64.encodeBase64(result).toString();
+        return new String(Base64.encodeBase64(result));
     }
 
     /**
